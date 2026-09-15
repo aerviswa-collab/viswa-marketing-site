@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viswa Marketing Agency — Surgical &amp; Medical Supplies, Chennai</title>
+<meta name="description" content="Viswa Marketing Agency supplies surgical and medical consumables and devices across Cardiac, Pulmonology, Nephrology, Orthopedic, Pediatric and other hospital departments in Navalur, Chennai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1F5F3;
+    --paper-raised:#FFFFFF;
+    --ink:#14231F;
+    --ink-soft:#4A5854;
+    --line:#D8E0DC;
+    --teal:#0B5E56;
+    --teal-deep:#083E39;
+    --clay:#A63D31;
+    --clay-soft:#F3E4E0;
+    --teal-soft:#E1EEEB;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  h1,h2,h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--teal-deep);
+  }
+  .mono{ font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  /* ---- Layout shell ---- */
+  .shell{
+    display:grid;
+    grid-template-columns:248px 1fr;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  @media (max-width:900px){
+    .shell{ grid-template-columns:1fr; }
+  }
+
+  /* ---- Top strip ---- */
+  .topstrip{
+    background:var(--teal-deep);
+    color:#DCEAE7;
+    font-size:13px;
+    padding:8px 24px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .topstrip span{ opacity:0.85; }
+
+  /* ---- Sidebar ---- */
+  .sidebar{
+    padding:32px 20px 40px;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    overflow-y:auto;
+    border-right:1px solid var(--line);
+  }
+  .brand{
+    display:block;
+    text-decoration:none;
+    margin-bottom:6px;
+  }
+  .brand .mark{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:22px;
+    color:var(--teal-deep);
+    line-height:1.15;
+  }
+  .brand .sub{
+    display:block;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+  .sidebar nav{
+    margin-top:28px;
+  }
+  .sidebar nav .label{
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .sidebar nav ul{
+    list-style:none;
+    margin:0; padding:0;
+  }
+  .sidebar nav li a{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    text-decoration:none;
+    padding:8px 0;
+    font-size:14.5px;
+    color:var(--ink);
+    border-bottom:1px solid var(--line);
+  }
+  .sidebar nav li a:hover{ color:var(--teal); }
+  .sidebar nav li a .count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .sidebar .cta{
+    margin-top:26px;
+    display:block;
+    text-align:center;
+    background:var(--teal);
+    color:#fff;
+    text-decoration:none;
+    padding:12px 14px;
+    font-size:14px;
+    font-weight:600;
+    border-radius:2px;
+  }
+  .sidebar .cta:hover{ background:var(--teal-deep); }
+
+  /* mobile nav */
+  .mobile-nav{
+    display:none;
+  }
+  @media (max-width:900px){
+    .sidebar{ display:none; }
+    .mobile-nav{
+      display:flex;
+      gap:10px;
+      overflow-x:auto;
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      background:var(--paper-raised);
+      position:sticky; top:0; z-index:5;
+    }
+    .mobile-nav a{
+      flex:0 0 auto;
+      font-size:13px;
+      padding:6px 12px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+  }
+
+  /* ---- Main ---- */
+  main{ padding:0 0 60px; }
+
+  .hero{
+    padding:64px 40px 48px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .eyebrow{
+    font-size:13px;
+    color:var(--clay);
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:38px;
+    line-height:1.18;
+    max-width:640px;
+  }
+  .hero p.lede{
+    max-width:560px;
+    font-size:16.5px;
+    color:var(--ink-soft);
+    margin-top:18px;
+  }
+  .hero .stats{
+    display:flex;
+    gap:36px;
+    margin-top:34px;
+    flex-wrap:wrap;
+  }
+  .hero .stats div b{
+    display:block;
+    font-family:'Source Serif 4', serif;
+    font-size:26px;
+    color:var(--teal-deep);
+  }
+  .hero .stats div span{
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---- Department section ---- */
+  .dept{
+    padding:44px 40px;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:24px;
+  }
+  .dept-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .dept-head h2{ font-size:24px; }
+  .dept-head .count{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--clay);
+    border:1px solid var(--clay-soft);
+    background:var(--clay-soft);
+    padding:2px 8px;
+    border-radius:20px;
+  }
+  .dept-note{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    max-width:600px;
+    margin-top:6px;
+  }
+  .item-list{
+    margin-top:22px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:32px;
+  }
+  @media (max-width:600px){
+    .item-list{ grid-template-columns:1fr; }
+  }
+  .item-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .item-row .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    width:24px;
+    flex:0 0 auto;
+  }
+  .item-row .name{ flex:1; }
+  .item-row .tag{
+    font-size:11px;
+    color:var(--teal);
+    border:1px solid var(--teal-soft);
+    background:var(--teal-soft);
+    padding:2px 7px;
+    border-radius:20px;
+    flex:0 0 auto;
+    margin-left:10px;
+  }
+
+  /* ---- Top sellers ---- */
+  .sellers{
+    padding:48px 40px;
+    background:var(--teal-deep);
+    color:#E9F1EF;
+  }
+  .sellers h2{ color:#fff; font-size:26px; }
+  .sellers p.lede{ color:#B9D2CD; max-width:560px; margin-top:12px; font-size:15px;}
+  .sellers-grid{
+    margin-top:28px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.14);
+  }
+  @media (max-width:900px){ .sellers-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .sellers-grid{ grid-template-columns:1fr; } }
+  .sellers-grid .cell{
+    background:var(--teal-deep);
+    padding:14px 16px;
+    font-size:14px;
+  }
+  .sellers-grid .cell .n{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:#7FB6AC;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  /* ---- Contact ---- */
+  .contact{
+    padding:56px 40px;
+  }
+  .contact h2{ font-size:26px; }
+  .contact-grid{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+  }
+  @media (max-width:700px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-grid p{ color:var(--ink-soft); font-size:15px; }
+  .contact-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    padding:22px;
+  }
+  .contact-card dl{ margin:0; }
+  .contact-card dt{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-top:14px;
+  }
+  .contact-card dt:first-child{ margin-top:0; }
+  .contact-card dd{
+    margin:2px 0 0;
+    font-size:15px;
+  }
+  .quote-btn{
+    display:inline-block;
+    margin-top:22px;
+    background:var(--clay);
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    font-size:14.5px;
+    font-weight:600;
+    border-radius:2px;
+  }
+  .quote-btn:hover{ background:#823026; }
+
+  footer{
+    padding:22px 40px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topstrip">
+  <span>Navalur, Chennai &nbsp;·&nbsp; Mon–Sat, 9:30 AM – 8:00 PM</span>
+  <span>Bulk &amp; institutional orders welcome</span>
+</div>
+
+<div class="mobile-nav" id="mobileNav"></div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <a href="#top" class="brand">
+      <span class="mark">Viswa Marketing<br>Agency</span>
+      <span class="sub">Surgical &amp; medical supplies</span>
+    </a>
+    <nav>
+      <div class="label mono">DEPARTMENTS</div>
+      <ul id="deptNav"></ul>
+    </nav>
+    <a class="cta" href="#contact">Request a quote</a>
+  </aside>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="eyebrow mono">VISWA MARKETING AGENCY — CHENNAI</div>
+      <h1>Surgical and medical supplies, organised by the department that needs them.</h1>
+      <p class="lede">We stock consumables and devices for cardiac, pulmonology, nephrology, orthopedic, pediatric and six other hospital departments — so clinics, nursing homes and home-care providers can order everything from one supplier.</p>
+      <div class="stats">
+        <div><b>10</b><span>departments stocked</span></div>
+        <div><b>105</b><span>listed items</span></div>
+        <div><b>1</b><span>Chennai warehouse, same-day dispatch</span></div>
+      </div>
+    </section>
+
+    <div id="deptSections"></div>
+
+    <section class="sellers" id="top-sellers">
+      <h2>Fast-moving, high-margin items</h2>
+      <p class="lede">The consumables that get reordered most often across every department we serve — good candidates to keep in standing stock.</p>
+      <div class="sellers-grid" id="sellersGrid"></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Order or ask about stock</h2>
+      <div class="contact-grid">
+        <p>Send us your department and item list and we'll confirm current stock, pack sizes and pricing. Standing monthly orders and hospital tenders are handled directly by our sales desk.</p>
+        <div class="contact-card">
+          <dl>
+            <dt class="mono">PHONE</dt>
+            <dd>+91 00000 00000</dd>
+            <dt class="mono">EMAIL</dt>
+            <dd>sales@viswamarketing.example</dd>
+            <dt class="mono">ADDRESS</dt>
+            <dd>Viswa Marketing Agency, Navalur, Chennai 600130</dd>
+          </dl>
+          <a class="quote-btn" href="mailto:sales@viswamarketing.example?subject=Quote%20request">Email a quote request</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <span>© 2026 Viswa Marketing Agency. All items subject to availability.</span>
+  <span>Prices and stock on request.</span>
+</footer>
+
+<script>
+const DEPARTMENTS = [
+  {
+    id: "cardiac",
+    name: "Cardiac",
+    note: "Monitoring, respiratory support and vascular access items for cardiac care.",
+    items: ["Digital BP Monitor","Pulse Oximeter","Glucometer","Glucose Test Strips","Thermometer","Compression Stockings","Chest Binder","Incentive Spirometer","Nebulizer Machine","Oxygen Mask","Nasal Cannula","Oxygen Tubing","IV Cannula","IV Infusion Set","Surgical Gloves"]
+  },
+  {
+    id: "pulmonology",
+    name: "Pulmonology",
+    note: "Airway, breathing-support and suction equipment for respiratory patients.",
+    items: ["Nebulizer Kit","Spacer","CPAP Mask","BiPAP Mask","Humidifier Bottle","Steam Vaporizer","Peak Flow Meter","Suction Catheter","Oxygen Regulator","Sputum Cup"]
+  },
+  {
+    id: "hepatology",
+    name: "Hepatology",
+    note: "Feeding, drainage and dressing supplies for liver-care and general ward use.",
+    items: ["Abdominal Binder","Adult Diapers","Underpads","Ryle's Tube","Feeding Syringe","Urine Can","Albumin Set","Antiseptic Solution","Syringes","Gauze"]
+  },
+  {
+    id: "nephrology",
+    name: "Nephrology",
+    note: "Dialysis-access care and general ward consumables for kidney-care patients.",
+    items: ["Dialysis Dressing Kit","AV Fistula Kit","Urine Bag","Measuring Jar","Gloves","Masks","BP Monitor","Glucometer","Sterile Cotton","Antiseptic"]
+  },
+  {
+    id: "neuro",
+    name: "Neuro / Bedridden",
+    note: "Mobility aids and bedside-care essentials for bedridden and neuro patients.",
+    items: ["Anti-Bedsore Mattress","Wheelchair","Walker","Neck Collar","Suction Machine","Urine Catheter","Bedside Commode","Adult Diapers","Feeding Tube","Hot Water Bag"]
+  },
+  {
+    id: "orthopedic",
+    name: "Orthopedic",
+    note: "Braces, supports and mobility aids for fractures, sprains and post-op recovery.",
+    items: ["Knee Brace","Lumbar Belt","Shoulder Immobilizer","Crepe Bandage","Ice Pack","Crutches","Cervical Collar","Elastic Bandage","Arm Sling","Ankle Support"]
+  },
+  {
+    id: "endocrinology",
+    name: "Endocrinology",
+    note: "Daily-use diabetic-care supplies for monitoring and insulin administration.",
+    items: ["Insulin Syringes","Insulin Pen Needles","Lancets","Sharps Container","Weighing Scale","BP Monitor","Glucose Strips","Glucometer","Sugar Control Log Book","Diabetic Foot Cream"]
+  },
+  {
+    id: "gastro",
+    name: "Gastro",
+    note: "Ostomy and drainage care items for gastrointestinal patients.",
+    items: ["Colostomy Bag","Ileostomy Bag","Drainage Bag","Feeding Syringe","Ryle's Tube","Dressing Kit","Abdominal Binder","Surgical Tape","Stoma Paste","Gauze Pads"]
+  },
+  {
+    id: "pediatric-women",
+    name: "Pediatric & Women",
+    note: "Maternity, newborn and pediatric-sized devices and consumables.",
+    items: ["Pediatric Nebulizer Mask","Baby Thermometer","Pregnancy Kit","Breast Pump","Maternity Belt","Baby Diapers","Pediatric Syringes","Sanitary Pads","Baby Nasal Aspirator","Pediatric BP Cuff","Infant Scale","Post-delivery Binder","Baby Feeding Bottle","Pediatric Oxygen Mask","Digital Fever Patch"]
+  }
+];
+
+const TOP_SELLERS = ["Glucose Test Strips","Insulin Pen Needles","Adult Diapers","Underpads","Stoma Bags","Compression Stockings","Nebulizer Kits","Gauze & Dressing Pads","Surgical Tape","Ryle's Tube","Feeding Syringe","Urine Bags","Antiseptic Solution","Crepe Bandage","Lumbar Belt","Knee Brace","Pregnancy Kits","BP Monitor","Pulse Oximeter","Oxygen Masks"];
+
+function pad(n){ return n.toString().padStart(2,'0'); }
+
+// Sidebar + mobile nav
+const deptNav = document.getElementById('deptNav');
+const mobileNav = document.getElementById('mobileNav');
+DEPARTMENTS.forEach(d => {
+  const li = document.createElement('li');
+  li.innerHTML = `<a href="#${d.id}"><span>${d.name}</span><span class="count mono">${pad(d.items.length)}</span></a>`;
+  deptNav.appendChild(li);
+
+  const chip = document.createElement('a');
+  chip.href = `#${d.id}`;
+  chip.textContent = `${d.name} (${d.items.length})`;
+  mobileNav.appendChild(chip);
+});
+
+// Department sections
+const container = document.getElementById('deptSections');
+DEPARTMENTS.forEach(d => {
+  const section = document.createElement('section');
+  section.className = 'dept';
+  section.id = d.id;
+
+  const rows = d.items.map((item, i) => `
+    <div class="item-row">
+      <span class="idx mono">${pad(i+1)}</span>
+      <span class="name">${item}</span>
+    </div>`).join('');
+
+  section.innerHTML = `
+    <div class="dept-head">
+      <h2>${d.name}</h2>
+      <span class="count">${d.items.length} items</span>
+    </div>
+    <p class="dept-note">${d.note}</p>
+    <div class="item-list">${rows}</div>
+  `;
+  container.appendChild(section);
+});
+
+// Top sellers
+const sellersGrid = document.getElementById('sellersGrid');
+TOP_SELLERS.forEach((item, i) => {
+  const cell = document.createElement('div');
+  cell.className = 'cell';
+  cell.innerHTML = `<span class="n mono">${pad(i+1)}</span>${item}`;
+  sellersGrid.appendChild(cell);
+});
+</script>
+
+</body>
+</html>
